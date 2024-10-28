@@ -7,8 +7,8 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
 material = "1.12.0"
-hilt_plugin = "2.46.1"
-hilt_version = "hilt-android:2.47"
+hiltPlugin = "2.51.1"
+roomVersion = "2.6.1"
 
 
 [libraries]
@@ -18,12 +18,14 @@ androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "j
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-hilt-dependency = {group= "com.google.dagger", name = "hilt_dependency", version.ref = "hilt_version"}
-hilt-compiler = {group= "com.google.dagger", name = "hilt_compiler", version.ref = "hilt_version"}
+
+room-runtime = { group= "androidx.room:room-runtime", name = "room_runtime", version.ref = "roomVersion"}
+room-compiler = { group= "androidx.room:room-compiler", name = "room_compiler", version.ref = "roomVersion"}
+room-kapt = { group= "androidx.room:room-compiler", name = "room_kapt", version.ref = "roomVersion"}
 
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt_plugin" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hiltPlugin" }
 

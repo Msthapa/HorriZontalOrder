@@ -1,8 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.hilt.android)
     kotlin("kapt") // using KAPT
+    alias(libs.plugins.hilt.android)
 }
 
 android {
@@ -38,13 +38,21 @@ android {
 }
 
 dependencies {
+    val hilt_version = "2.4.7"
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(libs.hilt.dependency)     // hilt dependency
-    kapt(libs.hilt.compiler)
+
+    implementation("com.google.dagger:hilt-android:$hilt_version") // Use the latest version
+    kapt("com.google.dagger:hilt-compiler:$hilt_version")
+
+
+    implementation(libs.room.runtime)         // room local database
+    annotationProcessor(libs.room.compiler)
+    kapt(libs.room.kapt)
 
 }
+apply(plugin = "dagger.hilt.android.plugin")
