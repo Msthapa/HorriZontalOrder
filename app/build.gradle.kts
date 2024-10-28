@@ -39,6 +39,9 @@ android {
 
 dependencies {
     val hilt_version = "2.51.1"
+    val room_version = "2.6.1"
+    val activity_version = "1.9.3"
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -49,10 +52,10 @@ dependencies {
     implementation("com.google.dagger:hilt-android:$hilt_version") // Use the latest version
     kapt("com.google.dagger:hilt-compiler:$hilt_version")
 
-
-    implementation(libs.room.runtime)         // room local database
-    annotationProcessor(libs.room.compiler)
-    kapt(libs.room.kapt)
+    implementation("androidx.room:room-runtime:$room_version")   // room local database
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+    implementation("androidx.activity:activity-ktx:$activity_version")
+    
 
 }
-apply(plugin = "dagger.hilt.android.plugin")

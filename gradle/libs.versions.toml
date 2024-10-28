@@ -19,10 +19,6 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
-room-runtime = { group= "androidx.room:room-runtime", name = "room_runtime", version.ref = "roomVersion"}
-room-compiler = { group= "androidx.room:room-compiler", name = "room_compiler", version.ref = "roomVersion"}
-room-kapt = { group= "androidx.room:room-compiler", name = "room_kapt", version.ref = "roomVersion"}
-
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
