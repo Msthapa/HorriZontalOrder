@@ -38,7 +38,7 @@ android {
 }
 
 dependencies {
-    val hilt_version = "2.4.7"
+    val hilt_version = "2.51.1"
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
