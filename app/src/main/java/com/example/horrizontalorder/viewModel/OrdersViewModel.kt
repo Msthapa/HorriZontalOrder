@@ -7,7 +7,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class MyOrdersViewModel @Inject constructor(private val saveOrderUseCase: SaveOrderUseCase) :
+class OrdersViewModel @Inject constructor(private val saveOrderUseCase: SaveOrderUseCase) :
     ViewModel() {
 
 }

@@ -35,12 +35,17 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
     val hilt_version = "2.51.1"
     val room_version = "2.6.1"
     val activity_version = "1.9.3"
+    val fragment_version = "1.8.4"
+    val recyclerView_version = "1.3.2"
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -55,7 +60,10 @@ dependencies {
     implementation("androidx.room:room-runtime:$room_version")   // room local database
     annotationProcessor("androidx.room:room-compiler:$room_version")
     kapt("androidx.room:room-compiler:$room_version")
+
     implementation("androidx.activity:activity-ktx:$activity_version")
+
+    implementation ("androidx.recyclerview:recyclerview:$recyclerView_version")
     
 
 }

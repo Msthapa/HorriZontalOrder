@@ -14,7 +14,7 @@
         android:theme="@style/Theme.HorriZontalOrder"
         tools:targetApi="31" >
         <activity
-            android:name=".view.MyOrdersActivity"
+            android:name=".view.activity.OrdersActivity"
             android:exported="true"
             android:launchMode="standard">
             <intent-filter>

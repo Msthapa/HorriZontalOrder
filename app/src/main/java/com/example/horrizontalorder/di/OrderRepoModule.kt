@@ -1,6 +1,6 @@
 package com.example.horrizontalorder.di
 
-import com.example.horrizontalorder.model.dao.OrderDao
+import com.example.horrizontalorder.model.room.dao.OrderDao
 import com.example.horrizontalorder.orderRepo.OrderRepo
 import com.example.horrizontalorder.orderRepo.OrderRepoImpl
 import com.example.horrizontalorder.useCase.SaveOrderUseCase
@@ -14,7 +14,7 @@ import dagger.hilt.components.SingletonComponent
 class OrderRepoModule {
 
     @Provides
-    fun provideOrderRepo(orderDao: OrderDao ) : OrderRepo {
+    fun provideOrderRepo(orderDao: OrderDao) : OrderRepo {
         return OrderRepoImpl(orderDao)
     }
 
