@@ -44,6 +44,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("com.google.dagger:hilt-android:2.47") // Use the latest version
-    kapt("com.google.dagger:hilt-compiler:2.47")
+    implementation(libs.hilt.dependency)     // hilt dependency
+    kapt(libs.hilt.compiler)
+
 }
